@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fitness Champions</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Cairo:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Poppins', sans-serif;
+            transition: 0.3s;
+        }
+        body.ar {
+            font-family: 'Cairo', sans-serif;
+        }
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+            background: #111;
+            color: #fff;
+        }
+        header .logo {
+            font-size: 26px;
+            font-weight: 700;
+        }
+        nav a {
+            margin: 0 15px;
+            color: #fff;
+            text-decoration: none;
+            font-weight: 500;
+        }
+        .lang-btn {
+            padding: 6px 12px;
+            background: #f00;
+            border: none;
+            color: #fff;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        .hero {
+            height: 100vh;
+            background: url('https://images.pexels.com/photos/1552242/pexels-photo-1552242.jpeg') center/cover no-repeat;
+            display: flex;
+            align-items: center;
+            padding: 0 5%;
+            color: #fff;
+            text-shadow: 0 0 8px #000;
+        }
+        .hero-content {
+            max-width: 600px;
+        }
+        .hero h1 {
+            font-size: 50px;
+            margin-bottom: 10px;
+            font-weight: 700;
+        }
+        .hero p {
+            font-size: 20px;
+            margin-bottom: 25px;
+        }
+        .btn-primary {
+            background: #e60000;
+            padding: 12px 25px;
+            border-radius: 6px;
+            color: #fff;
+            text-decoration: none;
+            font-weight: 600;
+        }
+        .champ-section {
+            padding: 60px 5%;
+            text-align: center;
+        }
+        .champ-section h2 {
+            font-size: 36px;
+            margin-bottom: 20px;
+        }
+        .champ-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+        .champ-card {
+            background: #111;
+            color: #fff;
+            border-radius: 10px;
+            overflow: hidden;
+        }
+        .champ-card img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+        }
+        .champ-card h3 {
+            padding: 15px;
+            margin: 0;
+        }
+        .subscribe {
+            background: #222;
+            padding: 60px 5%;
+            color: #fff;
+            text-align: center;
+        }
+        .subscribe h2 {font-size: 34px; margin-bottom: 10px;}
+        form {
+            max-width: 500px;
+            margin: auto;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+        input, select {
+            padding: 12px;
+            border-radius: 6px;
+            border: none;
+        }
+        button {
+            padding: 12px;
+            border: none;
+            background: #e60000;
+            color: #fff;
+            font-weight: 600;
+            border-radius: 6px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="logo" data-en="Fitness Champions" data-ar="أبطال اللياقة">Fitness Champions</div>
+    <nav>
+        <a href="#" data-en="Home" data-ar="الرئيسية">Home</a>
+        <a href="#champions" data-en="Champions" data-ar="الأبطال">Champions</a>
+        <a href="#subscribe" data-en="Join Now" data-ar="اشترك الآن">Join Now</a>
+    </nav>
+    <button class="lang-btn" id="langBtn">AR</button>
+</header>
+
+<section class="hero" id="home">
+    <div class="hero-content">
+        <h1 data-en="Unleash Your Power" data-ar="أطلق قوتك">Unleash Your Power</h1>
+        <p data-en="Premium gym equipment, professional athletes, and world‑class training in Cairo." 
+           data-ar="أجهزة جيم عالية الجودة، أبطال محترفون، وتدريب على أعلى مستوى في القاهرة.">Premium gym equipment...</p>
+        <a href="#subscribe" class="btn-primary" data-en="Join Membership" data-ar="اشترك الآن">Join Membership</a>
+    </div>
+</section>
+
+<section class="champ-section" id="champions">
+    <h2 data-en="Our Champions" data-ar="أبطالنا">Our Champions</h2>
+    <div class="champ-grid">
+        <div class="champ-card">
+            <img src="https://images.pexels.com/photos/1552106/pexels-photo-1552106.jpeg" alt="Champion">
+            <h3 data-en="Ahmed Hassan" data-ar="أحمد حسن">Ahmed Hassan</h3>
+        </div>
+        <div class="champ-card">
+            <img src="https://images.pexels.com/photos/3838331/pexels-photo-3838331.jpeg" alt="Champion">
+            <h3 data-en="Mona Samir" data-ar="منى سمير">Mona Samir</h3>
+        </div>
+        <div class="champ-card">
+            <img src="https://images.pexels.com/photos/841130/pexels-photo-841130.jpeg" alt="Champion">
+            <h3 data-en="Hassan Farouk" data-ar="حسن فاروق">Hassan Farouk</h3>
+        </div>
+    </div>
+</section>
+
+<section class="subscribe" id="subscribe">
+    <h2 data-en="Join Fitness Champions" data-ar="اشترك في أبطال اللياقة">Join Fitness Champions</h2>
+    <p data-en="Fill out the form below and our team will contact you." data-ar="املأ البيانات وسيتم التواصل معك.">Fill out the form...</p>
+
+    <form>
+        <input type="text" placeholder="Full Name" data-en="Full Name" data-ar="الاسم الكامل">
+        <input type="text" placeholder="Phone Number" data-en="Phone Number" data-ar="رقم الهاتف">
+        <select data-en="Membership Plan" data-ar="نوع الاشتراك">
+            <option>Basic</option>
+            <option>Premium</option>
+            <option>VIP</option>
+        </select>
+        <button type="submit" data-en="Submit" data-ar="إرسال">Submit</button>
+    </form>
+</section>
+
+<script>
+    const langBtn = document.getElementById('langBtn');
+    let isArabic = false;
+
+    langBtn.addEventListener('click', () => {
+        isArabic = !isArabic;
+        document.body.classList.toggle('ar', isArabic);
+
+        document.querySelectorAll('[data-en]').forEach(el => {
+            el.innerHTML = isArabic ? el.getAttribute('data-ar') : el.getAttribute('data-en');
+        });
+
+        document.documentElement.dir = isArabic ? 'rtl' : 'ltr';
+        langBtn.innerHTML = isArabic ? 'EN' : 'AR';
+    });
+</script>
+
+</body>
+</html>
